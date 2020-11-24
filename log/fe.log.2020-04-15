@@ -1,0 +1,19 @@
+2020/04/15 12:50:41 main.go:101: [WARN] set ncpu = 2
+2020/04/15 12:50:41 main.go:104: [WARN] set listen = 0.0.0.0:8080
+2020/04/15 12:50:41 main.go:120: [WARN] set assets = /gopath/src/github.com/CodisLabs/codis/bin/assets
+2020/04/15 12:50:41 main.go:162: [WARN] set --zookeeper = 192.168.1.105:2181
+2020/04/15 12:50:41 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/04/15 12:50:41 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.1.105:2181
+2020/04/15 12:50:41 zkclient.go:23: [INFO] zookeeper - Authenticated: id=72092189331947520, timeout=40000
+2020/04/15 12:50:41 zkclient.go:23: [INFO] zookeeper - Re-submitting `0` credentials after reconnect
+2020/04/15 12:52:09 zkclient.go:23: [INFO] zookeeper - Recv loop terminated: err=EOF
+2020/04/15 12:52:09 zkclient.go:23: [INFO] zookeeper - Send loop terminated: err=<nil>
+2020/04/15 12:52:10 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.1.105:2181
+2020/04/15 12:52:11 zkclient.go:23: [INFO] zookeeper - Authentication failed: EOF
+2020/04/15 12:52:12 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.1.105:2181
+2020/04/15 12:52:12 zkclient.go:23: [INFO] zookeeper - Authentication failed: EOF
+2020/04/15 12:52:13 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.1.105:2181
+2020/04/15 12:52:13 zkclient.go:23: [INFO] zookeeper - Authentication failed: zk: session has been expired by the server
+2020/04/15 12:52:14 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.1.105:2181
+2020/04/15 12:52:14 zkclient.go:23: [INFO] zookeeper - Authenticated: id=72092195738746881, timeout=40000
+2020/04/15 12:52:14 zkclient.go:23: [INFO] zookeeper - Re-submitting `0` credentials after reconnect

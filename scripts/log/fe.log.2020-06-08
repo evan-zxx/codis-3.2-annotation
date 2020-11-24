@@ -1,0 +1,63 @@
+2020/06/08 06:19:15 main.go:101: [WARN] set ncpu = 2
+2020/06/08 06:19:15 main.go:104: [WARN] set listen = 0.0.0.0:8080
+2020/06/08 06:19:15 main.go:120: [WARN] set assets = /gopath/src/github.com/CodisLabs/codis/bin/assets
+2020/06/08 06:19:15 main.go:162: [WARN] set --zookeeper = 192.168.115.95:2181
+2020/06/08 06:19:15 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.115.95:2181
+2020/06/08 06:19:15 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.115.95:2181
+2020/06/08 06:19:16 zkclient.go:23: [INFO] zookeeper - Authenticated: id=104229405665263666, timeout=60000
+2020/06/08 06:19:16 zkclient.go:23: [INFO] zookeeper - Re-submitting `0` credentials after reconnect
+2020/06/08 06:22:46 zkclient.go:23: [INFO] zookeeper - Recv loop terminated: err=EOF
+2020/06/08 06:22:46 zkclient.go:23: [INFO] zookeeper - Send loop terminated: err=<nil>
+2020/06/08 06:22:47 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:48 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:49 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:50 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:51 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:52 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:53 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:54 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:55 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:56 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:57 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:58 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:22:59 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:00 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:01 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:02 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:03 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:04 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:05 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:06 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:07 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:08 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:09 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:10 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:11 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:12 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:13 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:14 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:15 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:16 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:17 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:18 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused
+2020/06/08 06:23:19 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.115.95:2181
+2020/06/08 06:23:20 zkclient.go:23: [INFO] zookeeper - Authentication failed: EOF
+2020/06/08 06:23:21 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.115.95:2181
+2020/06/08 06:23:21 zkclient.go:23: [INFO] zookeeper - Authentication failed: EOF
+2020/06/08 06:23:22 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.115.95:2181
+2020/06/08 06:23:22 zkclient.go:23: [INFO] zookeeper - Authentication failed: EOF
+2020/06/08 06:23:23 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.115.95:2181
+2020/06/08 06:23:23 zkclient.go:23: [INFO] zookeeper - Authentication failed: EOF
+2020/06/08 06:23:24 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.115.95:2181
+2020/06/08 06:23:24 zkclient.go:23: [INFO] zookeeper - Authentication failed: EOF
+2020/06/08 06:23:27 main.go:101: [WARN] set ncpu = 2
+2020/06/08 06:23:27 main.go:104: [WARN] set listen = 0.0.0.0:8080
+2020/06/08 06:23:27 main.go:120: [WARN] set assets = /gopath/src/github.com/CodisLabs/codis/bin/assets
+2020/06/08 06:23:27 main.go:162: [WARN] set --zookeeper = 192.168.115.95:2181
+2020/06/08 06:23:27 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.115.95:2181
+2020/06/08 06:23:27 zkclient.go:23: [INFO] zookeeper - Connected to 192.168.115.95:2181
+2020/06/08 06:23:27 zkclient.go:23: [INFO] zookeeper - Authenticated: id=72057767538786304, timeout=40000
+2020/06/08 06:23:27 zkclient.go:23: [INFO] zookeeper - Re-submitting `0` credentials after reconnect
+2020/06/08 06:34:58 zkclient.go:23: [INFO] zookeeper - Recv loop terminated: err=EOF
+2020/06/08 06:34:58 zkclient.go:23: [INFO] zookeeper - Send loop terminated: err=<nil>
+2020/06/08 06:34:59 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.115.95:2181: dial tcp 192.168.115.95:2181: getsockopt: connection refused

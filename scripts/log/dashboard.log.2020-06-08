@@ -1,0 +1,1060 @@
+2020/06/08 06:19:10 main.go:78: [WARN] set ncpu = 2
+2020/06/08 06:19:10 main.go:88: [WARN] option --host-admin = 192.168.115.95:28080
+2020/06/08 06:19:10 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:10 topom.go:119: [WARN] create new topom:
+{
+    "token": "aec95f3b1ce7eaa4f87321601659d83b",
+    "start_time": "2020-06-08 06:19:10.089382973 +0000 UTC",
+    "admin_addr": "192.168.115.95:28080",
+    "product_name": "codis-dev",
+    "pid": 1,
+    "pwd": "/codis",
+    "sys": "Linux aa5e608e733b 4.9.184-linuxkit #1 SMP Tue Jul 2 22:58:16 UTC 2019 x86_64 GNU/Linux"
+}
+2020/06/08 06:19:10 topom.go:429: [WARN] admin start service on [::]:18080
+2020/06/08 06:19:10 main.go:142: [WARN] create topom with config
+coordinator_name = "zookeeper"
+coordinator_addr = "192.168.1.105:2181"
+coordinator_auth = ""
+admin_addr = "0.0.0.0:18080"
+product_name = "codis-dev"
+product_auth = ""
+migration_method = "semi-async"
+migration_parallel_slots = 100
+migration_async_maxbulks = 200
+migration_async_maxbytes = "32mb"
+migration_async_numkeys = 500
+migration_timeout = "30s"
+sentinel_client_timeout = "10s"
+sentinel_quorum = 2
+sentinel_parallel_syncs = 1
+sentinel_down_after = "30s"
+sentinel_failover_timeout = "5m"
+sentinel_notification_script = ""
+sentinel_client_reconfig_script = ""
+2020/06/08 06:19:11 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:11 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:11 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:11 main.go:171: [WARN] [0xc42018e240] dashboard online failed [0]
+2020/06/08 06:19:12 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:14 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:14 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:14 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:14 main.go:171: [WARN] [0xc42018e240] dashboard online failed [1]
+2020/06/08 06:19:15 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:17 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:17 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:17 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:17 main.go:171: [WARN] [0xc42018e240] dashboard online failed [2]
+2020/06/08 06:19:18 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:20 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:20 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:20 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:20 main.go:171: [WARN] [0xc42018e240] dashboard online failed [3]
+2020/06/08 06:19:21 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:23 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:23 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:23 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:23 main.go:171: [WARN] [0xc42018e240] dashboard online failed [4]
+2020/06/08 06:19:24 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:26 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:26 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:26 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:26 main.go:171: [WARN] [0xc42018e240] dashboard online failed [5]
+2020/06/08 06:19:27 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:29 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:29 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:29 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:29 main.go:171: [WARN] [0xc42018e240] dashboard online failed [6]
+2020/06/08 06:19:30 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:32 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:32 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:32 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:32 main.go:171: [WARN] [0xc42018e240] dashboard online failed [7]
+2020/06/08 06:19:33 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:35 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:35 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:35 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:35 main.go:171: [WARN] [0xc42018e240] dashboard online failed [8]
+2020/06/08 06:19:36 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:38 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:38 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:38 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:38 main.go:171: [WARN] [0xc42018e240] dashboard online failed [9]
+2020/06/08 06:19:39 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:41 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:41 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:41 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:41 main.go:171: [WARN] [0xc42018e240] dashboard online failed [10]
+2020/06/08 06:19:42 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:44 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:44 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:44 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:44 main.go:171: [WARN] [0xc42018e240] dashboard online failed [11]
+2020/06/08 06:19:45 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:47 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:47 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:47 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:47 main.go:171: [WARN] [0xc42018e240] dashboard online failed [12]
+2020/06/08 06:19:48 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:50 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:50 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:50 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:50 main.go:171: [WARN] [0xc42018e240] dashboard online failed [13]
+2020/06/08 06:19:51 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:53 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:53 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:53 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:53 main.go:171: [WARN] [0xc42018e240] dashboard online failed [14]
+2020/06/08 06:19:54 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:56 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:56 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:56 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:56 main.go:171: [WARN] [0xc42018e240] dashboard online failed [15]
+2020/06/08 06:19:57 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:59 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:19:59 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:19:59 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:19:59 main.go:173: [PANIC] dashboard online failed, give up & abort :'(
+[stack]: 
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:173
+            main.main
+        ... ...
+2020/06/08 06:23:20 main.go:78: [WARN] set ncpu = 2
+2020/06/08 06:23:20 main.go:88: [WARN] option --host-admin = 192.168.115.95:28080
+2020/06/08 06:23:20 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:20 topom.go:119: [WARN] create new topom:
+{
+    "token": "1b8b2a72ca1d3ffbcd95ad3214c4ea2b",
+    "start_time": "2020-06-08 06:23:20.980461512 +0000 UTC",
+    "admin_addr": "192.168.115.95:28080",
+    "product_name": "codis-dev",
+    "pid": 1,
+    "pwd": "/codis",
+    "sys": "Linux c7ba71b11390 4.9.184-linuxkit #1 SMP Tue Jul 2 22:58:16 UTC 2019 x86_64 GNU/Linux"
+}
+2020/06/08 06:23:20 main.go:142: [WARN] create topom with config
+coordinator_name = "zookeeper"
+coordinator_addr = "192.168.1.105:2181"
+coordinator_auth = ""
+admin_addr = "0.0.0.0:18080"
+product_name = "codis-dev"
+product_auth = ""
+migration_method = "semi-async"
+migration_parallel_slots = 100
+migration_async_maxbulks = 200
+migration_async_maxbytes = "32mb"
+migration_async_numkeys = 500
+migration_timeout = "30s"
+sentinel_client_timeout = "10s"
+sentinel_quorum = 2
+sentinel_parallel_syncs = 1
+sentinel_down_after = "30s"
+sentinel_failover_timeout = "5m"
+sentinel_notification_script = ""
+sentinel_client_reconfig_script = ""
+2020/06/08 06:23:20 topom.go:429: [WARN] admin start service on [::]:18080
+2020/06/08 06:23:21 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:21 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:21 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:21 main.go:171: [WARN] [0xc42007c360] dashboard online failed [0]
+2020/06/08 06:23:22 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:24 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:24 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:24 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:24 main.go:171: [WARN] [0xc42007c360] dashboard online failed [1]
+2020/06/08 06:23:25 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:27 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:27 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:27 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:27 main.go:171: [WARN] [0xc42007c360] dashboard online failed [2]
+2020/06/08 06:23:28 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:30 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:30 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:31 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:31 main.go:171: [WARN] [0xc42007c360] dashboard online failed [3]
+2020/06/08 06:23:31 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:34 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:34 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:34 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:34 main.go:171: [WARN] [0xc42007c360] dashboard online failed [4]
+2020/06/08 06:23:35 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:37 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:37 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:37 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:37 main.go:171: [WARN] [0xc42007c360] dashboard online failed [5]
+2020/06/08 06:23:38 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:40 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:40 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:40 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:40 main.go:171: [WARN] [0xc42007c360] dashboard online failed [6]
+2020/06/08 06:23:41 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:43 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:43 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:43 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:43 main.go:171: [WARN] [0xc42007c360] dashboard online failed [7]
+2020/06/08 06:23:44 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:46 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:46 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:46 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:46 main.go:171: [WARN] [0xc42007c360] dashboard online failed [8]
+2020/06/08 06:23:47 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:49 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:49 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:49 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:49 main.go:171: [WARN] [0xc42007c360] dashboard online failed [9]
+2020/06/08 06:23:50 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:52 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:52 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:52 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:52 main.go:171: [WARN] [0xc42007c360] dashboard online failed [10]
+2020/06/08 06:23:53 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:55 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:55 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:55 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:55 main.go:171: [WARN] [0xc42007c360] dashboard online failed [11]
+2020/06/08 06:23:56 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:58 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:23:58 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:23:58 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:23:58 main.go:171: [WARN] [0xc42007c360] dashboard online failed [12]
+2020/06/08 06:23:59 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:01 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:01 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:24:01 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:24:01 main.go:171: [WARN] [0xc42007c360] dashboard online failed [13]
+2020/06/08 06:24:02 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:04 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:04 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:24:04 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:24:04 main.go:171: [WARN] [0xc42007c360] dashboard online failed [14]
+2020/06/08 06:24:05 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:07 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:07 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:24:07 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:24:07 main.go:171: [WARN] [0xc42007c360] dashboard online failed [15]
+2020/06/08 06:24:08 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:10 zkclient.go:23: [INFO] zookeeper - Failed to connect to 192.168.1.105:2181: dial tcp 192.168.1.105:2181: i/o timeout
+2020/06/08 06:24:10 zkclient.go:23: [INFO] zookeeper - zkclient setup new connection to 192.168.1.105:2181
+2020/06/08 06:24:10 topom.go:189: [ERROR] store: acquire lock of codis-dev failed
+[error]: zk: could not connect to a server
+    7   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:168
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).mkdir
+    6   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:236
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).create
+    5   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:196
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create.func1
+    4   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:129
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).shell
+    3   /gopath/src/github.com/CodisLabs/codis/pkg/models/zk/zkclient.go:198
+            github.com/CodisLabs/codis/pkg/models/zk.(*Client).Create
+    2   /gopath/src/github.com/CodisLabs/codis/pkg/models/store.go:119
+            github.com/CodisLabs/codis/pkg/models.(*Store).Acquire
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:188
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+[stack]: 
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/topom.go:189
+            github.com/CodisLabs/codis/pkg/topom.(*Topom).Start
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:169
+            main.main
+        ... ...
+2020/06/08 06:24:10 main.go:173: [PANIC] dashboard online failed, give up & abort :'(
+[stack]: 
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:173
+            main.main
+        ... ...

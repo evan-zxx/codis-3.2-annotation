@@ -1,0 +1,12 @@
+2020/04/15 12:50:34 main.go:104: [WARN] set ncpu = 4, max-ncpu = 4
+2020/04/15 12:50:34 main.go:113: [PANIC] load config proxy.toml failed
+[error]: open proxy.toml: no such file or directory
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/proxy/config.go:201
+            github.com/CodisLabs/codis/pkg/proxy.(*Config).LoadFromFile
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/proxy/main.go:112
+            main.main
+        ... ...
+[stack]: 
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/proxy/main.go:113
+            main.main
+        ... ...

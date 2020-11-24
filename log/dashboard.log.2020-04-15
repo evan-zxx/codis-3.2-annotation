@@ -1,0 +1,12 @@
+2020/04/15 12:50:33 main.go:78: [WARN] set ncpu = 2
+2020/04/15 12:50:33 main.go:83: [PANIC] load config dashboard.toml failed
+[error]: open dashboard.toml: no such file or directory
+    1   /gopath/src/github.com/CodisLabs/codis/pkg/topom/config.go:101
+            github.com/CodisLabs/codis/pkg/topom.(*Config).LoadFromFile
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:82
+            main.main
+        ... ...
+[stack]: 
+    0   /gopath/src/github.com/CodisLabs/codis/cmd/dashboard/main.go:83
+            main.main
+        ... ...
